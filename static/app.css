@@ -101,3 +101,31 @@ main {
 .hidden {
   display: none;
 }
+
+@media (min-width: 40rem) {
+  body {
+    grid-template-rows: 5rem 10rem 1fr;
+  }
+
+  .container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .container input {
+    margin: 0 2rem;
+  }
+
+  .board-cell {
+    font-size: 4rem;
+  }
+
+  .score-timmer p {
+    font-size: 3rem;
+  }
+  .alert {
+      margin-top: .3rem;
+  }
+}
