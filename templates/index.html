@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block title %}Boogle!{% endblock %} {% block
+form_score_timmer %}
+<div class="container">
+  <form action="" id="form">
+    <input type="text" name="word" placeholder="guess" id="input" />
+    <button class="btn">Check</button>
+  </form>
+</div>
+<div class="score-timmer">
+  <p class="score"></p>
+  <p class="timmer">60 seconds</p>
+</div>
+{% endblock %} {% block content %}
+<table class="board">
+  <tbody>
+    {% for row in board %}
+    <tr>
+      {% for cell in row %}
+      <td class="board-cell">{{cell}}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<p class="alert"></p>
+<button class="btn hidden" id="reset">Try Again</button>
+{% endblock %}
